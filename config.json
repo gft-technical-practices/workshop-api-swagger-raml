@@ -19,6 +19,9 @@
           "swaggerDocketConfig": true,
           "library": "spring-boot"
         }
+      },
+      "nodejs-server": {
+        "options":{}
       }
     }
   }
