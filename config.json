@@ -1,0 +1,25 @@
+{
+  "api":{
+    "swagger": "https://raw.githubusercontent.com/gft-technical-practices/workshop-api-development/master/users_api.yaml"
+  },
+  "generator": {
+    "output": "./generated",
+    "clients": {
+      "url": "http://localhost:9000/api/gen/clients"
+    },
+    "servers": {
+      "url": "http://localhost:9000/api/gen/servers",
+      "spring": {
+        "options": {
+          "groupId": "com.gft.pratice.workshop",
+          "artifactId": "user-api",
+          "invokerPackage": "com.gft.pratice.workshop",
+          "modelPackage": "model",
+          "apiPackage": "api",
+          "swaggerDocketConfig": true,
+          "library": "spring-boot"
+        }
+      }
+    }
+  }
+}

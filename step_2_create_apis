@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+const config = require('./config.json');
+const tools = require('./lib/common.js').tools;
+const swg = require('./lib/swgrequest.js');
+
+swg.createServer('spring', (result) => {
+  if (result) {
+    tools.shell.echo(result.message);
+  }
+});
+
+swg.createServer('nodejs-server', (result) => {
+  if (result) {
+    tools.shell.echo(result.message);
+  }
+});
+
+swg.createServer('loopback', (result) => {
+  if (result) {
+    tools.shell.echo(result.message);
+  }
+});
