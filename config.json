@@ -5,7 +5,32 @@
   "generator": {
     "output": "./generated",
     "clients": {
-      "url": "http://localhost:9000/api/gen/clients"
+      "url": "http://localhost:9000/api/gen/clients",
+      "java": {
+        "options": {
+          "groupId": "com.gft.pratice.workshop",
+          "artifactId": "user-api",
+          "invokerPackage": "com.gft.pratice.workshop",
+          "modelPackage": "model",
+          "apiPackage": "api",
+          "dateLibrary": "java8",
+          "java8": "true",
+          "useBeanValidation": true,
+          "performBeanValidation": true,
+          "useGzipFeature": true,
+          "useRuntimeException": true,
+          "library": "resteasy"
+        }
+      },
+      "javascript": {
+        "options": {
+          "usePromises": "true",
+          "emitModelMethods": "true",
+          "emitJSDoc": "true",
+          "useInheritance": "true",
+          "useES6": "true"
+        }
+      }
     },
     "servers": {
       "url": "http://localhost:9000/api/gen/servers",
@@ -16,6 +41,10 @@
           "invokerPackage": "com.gft.pratice.workshop",
           "modelPackage": "model",
           "apiPackage": "api",
+          "dateLibrary": "java8",
+          "java8": "true",
+          "useBeanValidation": true,
+          "performBeanValidation": true,
           "swaggerDocketConfig": true,
           "library": "spring-boot"
         }

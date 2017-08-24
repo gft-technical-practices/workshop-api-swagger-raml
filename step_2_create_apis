@@ -3,21 +3,37 @@
 const config = require('./config.json');
 const tools = require('./lib/common.js').tools;
 const swg = require('./lib/swgrequest.js');
+const fs = require('fs-extra');
+const path = require('path');
 
-swg.createServer('spring', (result) => {
+const spec = fs.readJsonSync(path.resolve('./specs/users_api.json'));
+
+// Criando as apis na versão server
+swg.createServer(spec, 'spring', (result) => {
+  if (result) {
+    tools.shell.echo(result.message);
+  }
+});
+swg.createServer(spec, 'nodejs-server', (result) => {
+  if (result) {
+    tools.shell.echo(result.message);
+  }
+});
+swg.createServer(spec, 'loopback', (result) => {
   if (result) {
     tools.shell.echo(result.message);
   }
 });
 
-swg.createServer('nodejs-server', (result) => {
+// Criando os apis na versão client
+swg.createClient(spec, 'java', (result) => {
+  if (result) {
+    tools.shell.echo(result.message);
+  }
+});
+swg.createClient(spec, 'javascript', (result) => {
   if (result) {
     tools.shell.echo(result.message);
   }
 });
 
-swg.createServer('loopback', (result) => {
-  if (result) {
-    tools.shell.echo(result.message);
-  }
-});

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-mkdir docs
-curl https://raw.githubusercontent.com/gft-technical-practices/workshop-api-development/master/users_api.yaml --output ./docs/users_api.yaml
+mkdir specs
+curl https://raw.githubusercontent.com/gft-technical-practices/workshop-api-development/master/users_api.yaml --output ./specs/users_api.yaml
 
 # Installing npm modules
 npm install shelljs commander yamljs request request-promise fs-extra lodash handlebars decompress decompress-unzip
@@ -25,3 +25,6 @@ docker run -d -p 7000:8080 --name swagger-ui swaggerapi/swagger-ui
 
 # List running containers
 docker ps
+
+# Convert YAML Swagger to JSON Swagger
+yaml2json ./specs/users_api.yaml --pretty  > ./specs/users_api.json

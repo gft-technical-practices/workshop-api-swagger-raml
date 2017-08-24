@@ -18,10 +18,8 @@ durante a execução será pedido a senha de usuário, que deve estar configurad
 
 (em desenvolvimento)
 
-
 José Carlos M. Oliveira Jr.
 jose.oliveira@gft.com
 
 Team API & Integration Practice Brazil
 GFT Brazil
-
