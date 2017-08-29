@@ -14,8 +14,7 @@ Na criação desta demo usamos ferramentas abertas que possuem algumas dependên
 
 ### Preparação das ferramentas Swagger
 
-Utilizaremos na demo ferramentas fornecidas pelo projeto [Open API Initiative](https://www.openapis.org/), utilizando suas versões em containers [Docker](https://www.docker.com). Também será utilizada o módulo swagger para NodeJS para a criação da Sandbox. Outra ferramenta utilizada será o framework para criação de microservices [Loopback](https://loopback.io) da StrongLoop, também baseado em NodeJS.
-
+Utilizaremos na demo ferramentas fornecidas pelo projeto [Open API Initiative](https://www.openapis.org/), utilizando suas versões em containers [Docker](https://www.docker.com). Também será utilizada o módulo swagger para NodeJS para a criação da Sandbox.
 Para essa preparação temos o script que instala e prepara as ferramentas para isso (desde que as dependências mencionadas no arquivo [Dependências](deps.md) estejam resolvidas). Abra um terminal e execute o script:
 
     >./step_1_setup_tools
@@ -39,7 +38,6 @@ Criaremos código baseados na especificação da API (ref), da seguinte forma:
 * Servidores:
   * Java Spring Boot
   * NodeJS
-  * Loopback
 * Clientes:
   * Java
   * NodeJs
