@@ -19,7 +19,7 @@ docker pull openjdk:8-jdk-alpine
 sudo -i npm install -g swagger yamljs mustache
 
 # Run containers
-docker run -d -e GENERATOR_HOST=http://localhost -p 9000:8080 --name swagger-generator swaggerapi/swagger-generator
+docker run -d -e GENERATOR_HOST=http://localhost:9000 -p 9000:8080 --name swagger-generator swaggerapi/swagger-generator
 docker run -d -p 8000:8080 --name swagger-editor swaggerapi/swagger-editor
 docker run -d -p 7000:8080 --name swagger-ui swaggerapi/swagger-ui
 
