@@ -8,7 +8,17 @@ Para instalar as aplicações necessárias, com excessão do NodeJS, podem ser i
 
     >sudo dnf install git docker docker-compose java-1.8.0-openjdk java-1.8.0-openjdk-devel java-1.8.0-openjdk-headless maven
 
-para instalar o NodeJS pode utilizar o script que esta na pasta scripts/fedora:
+Para utilizar o docker com seu usuário é necessário das as permissões através dos comandos abaixo:
+
+    >sudo groupadd docker
+    >sudo chown root:docker /var/run/docker.sock
+    >sudo usermod -a -G docker $USERNAME
+
+Também é importante iniciar o serviço do docker, usando o comando a inicialização fica permanente:
+
+    >sudo systemctl enable docker
+
+Para instalar o NodeJS pode utilizar o script que esta na pasta scripts/fedora:
 
     >cd scripts/fedora
     >./install_nodejs
