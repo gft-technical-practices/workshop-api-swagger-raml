@@ -50,9 +50,12 @@ Para isso utilizaremos outro script. No terminal execute:
 
 Com as implementações geradas demonstraremos a interoperabilidade entre as versões servidoras e clientes, indepêndentes de plataforma e linguagem, sempre baseada no contrato estabelecido pela especificação da API [User](https://github.com/gft-technical-practices/workshop-api-development/blob/master/users_api.yaml).
 
-Apesar de gerarmos código através das ferramentas de forma automática, elas ainda necessitam de alguns ajustes para que fiquem funcionais. Para isso execute o terceiro script que faz as modificações necessárias:
+No próximo passo faremos o build das APIs e seus clients, para que possam ser utilizados em outras aplicações permitindo acesso as APIs quando em execução. Para isso execute os dois scripts como descrito abaixo:
 
-    >./step_3_tunning_apis
+    >./step_3_build
+    >./step_4_dockerize_apis
+
+O primeiro empacota e o segundo cria imagens docker para os serviços das APIs.
 
 Para testarmos use o script de execução da seguinte forma, no terminal:
 
