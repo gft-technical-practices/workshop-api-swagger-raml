@@ -9,31 +9,10 @@ const path = require('path');
 const spec = fs.readJsonSync(path.resolve('./specs/users_api.json'));
 
 // Criando as apis na versão server
-swg.createServer(spec, 'spring', (result) => {
-  if (result) {
-    tools.shell.echo(result.message);
-  }
-});
-swg.createServer(spec, 'nodejs-server', (result) => {
-  if (result) {
-    tools.shell.echo(result.message);
-  }
-});
-swg.createServer(spec, 'loopback', (result) => {
-  if (result) {
-    tools.shell.echo(result.message);
-  }
-});
+tools.shell.echo(swg.createServer(spec, 'spring'));
+tools.shell.echo(swg.createServer(spec, 'nodejs-server'));
 
 // Criando os apis na versão client
-swg.createClient(spec, 'java', (result) => {
-  if (result) {
-    tools.shell.echo(result.message);
-  }
-});
-swg.createClient(spec, 'javascript', (result) => {
-  if (result) {
-    tools.shell.echo(result.message);
-  }
-});
+tools.shell.echo(swg.createClient(spec, 'java'));
+tools.shell.echo(swg.createClient(spec, 'javascript'));
 
