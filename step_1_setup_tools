@@ -4,7 +4,8 @@ mkdir specs
 curl https://raw.githubusercontent.com/gft-technical-practices/workshop-api-development/master/users_api.yaml --output ./specs/users_api.yaml
 
 # Installing npm modules
-npm install shelljs commander yamljs request request-promise fs-extra lodash handlebars decompress decompress-unzip
+npm install shelljs commander yamljs request request-promise fs-extra lodash handlebars unzipper
+
 # Get IP address from first virtual box network device
 # Change the name of the network device to one more appropriate for your machine
 NETDEVICE=virbr0
@@ -15,8 +16,12 @@ docker pull swaggerapi/swagger-generator
 docker pull swaggerapi/swagger-editor
 docker pull swaggerapi/swagger-ui
 
+# APIs base docker images
+docker pull node:alpine
+docker pull openjdk:8-jdk-alpine
+
 # Another comand line tool
-sudo npm install -g swagger loopback-cli yamljs mustache
+sudo npm install -g swagger yamljs mustache
 
 # Run containers
 docker run -d -e GENERATOR_HOST=http://$MYIPADDRESS -p 9000:8080 --name swagger-generator swaggerapi/swagger-generator
