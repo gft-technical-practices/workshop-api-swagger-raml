@@ -2,8 +2,19 @@
   "api":{
     "swagger": "https://raw.githubusercontent.com/gft-technical-practices/workshop-api-development/master/users_api.yaml"
   },
+  "builders": {
+    "gradle": {
+      "options": "",
+      "task": "build"
+    },
+    "maven": {
+      "options": "",
+      "goal": "install"
+    }
+  },
   "generator": {
-    "output": "./generated",
+    "download": "./download",
+    "generated": "./generated",
     "clients": {
       "url": "http://localhost:9000/api/gen/clients",
       "java": {
@@ -15,11 +26,9 @@
           "apiPackage": "api",
           "dateLibrary": "java8",
           "java8": "true",
-          "useBeanValidation": true,
-          "performBeanValidation": true,
           "useGzipFeature": true,
           "useRuntimeException": true,
-          "library": "resteasy"
+          "library": "okhttp-gson"
         }
       },
       "javascript": {
@@ -43,8 +52,6 @@
           "apiPackage": "api",
           "dateLibrary": "java8",
           "java8": "true",
-          "useBeanValidation": true,
-          "performBeanValidation": true,
           "swaggerDocketConfig": true,
           "library": "spring-boot"
         }
