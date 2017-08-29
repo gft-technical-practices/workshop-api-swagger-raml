@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const tools = require('./lib/common.js').tools;
+const config = require('./config.json');
+const build = require('./lib/builders.js');
+
+// copy spring Dockerfile to spring-server
+let source = path.resolve(__dirname, './templates/docker/spring/Dockerfile');
+let target = path.resolve(`${config.generator.generated}/spring-server/Dockerfile`);
+tools.shell.cp(source, target);
+
+// copy nodejs Dockerfile to node-server-server
+source = path.resolve(__dirname, './templates/docker/node/Dockerfile');
+target = path.resolve(`${config.generator.generated}/nodejs-server-server/Dockerfile`);
+tools.shell.cp(source, target);
+
+build.dockerServers()
+.then((result) => {
+  console.log(result);
+});
+
