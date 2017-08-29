@@ -6,11 +6,6 @@ curl https://raw.githubusercontent.com/gft-technical-practices/workshop-api-deve
 # Installing npm modules
 npm install shelljs commander yamljs request request-promise fs-extra lodash handlebars unzipper
 
-# Get IP address from first virtual box network device
-# Change the name of the network device to one more appropriate for your machine
-NETDEVICE=virbr0
-MYIPADDRESS=`/sbin/ip -4 -o addr show dev $NETDEVICE| awk '{split($4,a,"/");print a[1]}'`
-
 # The easiest way to run Swagger tools is to use docker containers
 docker pull swaggerapi/swagger-generator
 docker pull swaggerapi/swagger-editor
@@ -24,7 +19,7 @@ docker pull openjdk:8-jdk-alpine
 sudo -i npm install -g swagger yamljs mustache
 
 # Run containers
-docker run -d -e GENERATOR_HOST=http://$MYIPADDRESS -p 9000:8080 --name swagger-generator swaggerapi/swagger-generator
+docker run -d -e GENERATOR_HOST=http://localhost -p 9000:8080 --name swagger-generator swaggerapi/swagger-generator
 docker run -d -p 8000:8080 --name swagger-editor swaggerapi/swagger-editor
 docker run -d -p 7000:8080 --name swagger-ui swaggerapi/swagger-ui
 
