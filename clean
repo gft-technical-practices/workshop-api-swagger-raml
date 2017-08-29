@@ -1,4 +1,12 @@
 #!/bin/bash
 
+# Generated Sandboxes Packages
 rm -rf generated
+
+# Node.JS Dependencies
+rm -rf node_modules
+
+# Remove Docker Swagger Tools
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
 
