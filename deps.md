@@ -31,7 +31,7 @@ Reinicie novamente e tudo funcionará como o esperado.
 
 Para instalar as aplicações necessárias, com excessão do NodeJS, podem ser instaladas via gerenciador de pacotes dnf:
 
-    >sudo apt-get install git docker docker-compose java-1.8.0-openjdk java-1.8.0-openjdk-devel java-1.8.0-openjdk-headless maven
+    >sudo apt-get install git docker docker-compose openjdk-8-jdk maven
 
 Para instalar o NodeJS pode utilizar o script que esta na pasta scripts/fedora:
 
