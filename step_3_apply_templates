@@ -18,3 +18,8 @@ tools.shell.cp(source, target);
 source = path.resolve(__dirname, './templates/nodejs-server-server/service/UserService.js');
 target = path.resolve(`${config.generator.generated}/nodejs-server-server/service/UserService.js`);
 tools.shell.cp(source, target);
+
+// copy spring-server templates
+source = path.resolve(__dirname, './templates/spring-server/src/main/java/api/UsersApi.java');
+target = path.resolve(`${config.generator.generated}/spring-server/src/main/java/api/UsersApi.java`);
+tools.shell.cp(source, target);
