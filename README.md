@@ -42,11 +42,21 @@ Criaremos código baseados na especificação da API (ref), da seguinte forma:
   * Java
   * NodeJs
 
+### Criando as APIs
+
 Para isso utilizaremos outro script. No terminal execute:
 
     >./step_2_create_apis
 
 Com as implementações geradas demonstraremos a interoperabilidade entre as versões servidoras e clientes, indepêndentes de plataforma e linguagem, sempre baseada no contrato estabelecido pela especificação da API [User](https://github.com/gft-technical-practices/workshop-api-development/blob/master/users_api.yaml).
+
+### Aplicando templates
+
+O código gerado pelo swagger-generator é baseado na especificação da API, mas não tem um controle de persistência ou funcionalidades de negócio. Podemos alterar seus templates ou após o código ser gerado aplicar templates prontos que complementem esse código. Como exemplo execute o o próximo passo:
+
+    >./step_4_apply_templates
+
+### Build e Docker
 
 No próximo passo faremos o build das APIs e seus clients, para que possam ser utilizados em outras aplicações permitindo acesso as APIs quando em execução. Para isso execute os dois scripts como descrito abaixo:
 
@@ -55,18 +65,12 @@ No próximo passo faremos o build das APIs e seus clients, para que possam ser u
 
 O primeiro empacota e o segundo cria imagens docker para os serviços das APIs.
 
+### Teste
+
 Para testarmos use o script de execução da seguinte forma, no terminal:
 
-    >./execute java node
-
-Isso irá executar o servidor java e o client node para demonstrar a interoperabilidade. Podemos ainda executar:
-
-    >./execute node java
-    >./execute java java
-    >./execute node node
-    >./execute loopback java
-    >./execute loopback node
-
+    >./step_6_execute
+    
 (to be continue...)
 
 José Carlos M. Oliveira Jr.

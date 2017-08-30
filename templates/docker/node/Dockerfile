@@ -6,5 +6,5 @@ COPY package.json /usr/src/app/
 RUN npm install
 
 COPY . /usr/src/app
-EXPOSE 3000
+EXPOSE 8243
 CMD [ "npm", "start" ]
