@@ -11,8 +11,15 @@ const spec = fs.readJsonSync(path.resolve('./specs/users_api.json'));
 // Criando as apis na versão server
 tools.shell.echo(swg.createServer(spec, 'spring'));
 tools.shell.echo(swg.createServer(spec, 'nodejs-server'));
+tools.shell.echo(swg.createServer(spec, 'nodejs-server'));
 
 // Criando os apis na versão client
 tools.shell.echo(swg.createClient(spec, 'java'));
 tools.shell.echo(swg.createClient(spec, 'javascript'));
+tools.shell.echo(swg.createClient(spec, 'typescript-node'));
+tools.shell.echo(swg.createClient(spec, 'jmeter'));
+tools.shell.echo(swg.createClient(spec, 'go'));
+tools.shell.echo(swg.createClient(spec, 'bash'));
+
+
 
