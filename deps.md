@@ -50,7 +50,7 @@ Neste ponto será necessário reiniciar a máquina. Depois para utilizar o docke
 
     >sudo groupadd docker
     >sudo chown root:docker /var/run/docker.sock
-    >sudo usermod -a -G docker $USERNAME
+    >sudo usermod -a -G docker $USER
 
 Reinicie novamente e tudo funcionará como o esperado.
 
