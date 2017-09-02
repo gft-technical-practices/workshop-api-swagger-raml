@@ -7,6 +7,15 @@ rm -rf generated
 rm -rf node_modules
 
 # Remove Docker Swagger Tools
-docker stop $(docker ps -a -q)
-docker rm $(docker ps -a -q)
+docker stop swagger-editor
+docker stop swagger-ui
+docker stop swagger-generator
+docker stop nodejs-server
+docker stop spring-server
+
+docker rm swagger-editor
+docker rm swagger-ui
+docker rm swagger-generator
+docker rm nodejs-server
+docker rm spring-server
 

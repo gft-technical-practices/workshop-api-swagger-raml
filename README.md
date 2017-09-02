@@ -69,10 +69,9 @@ O primeiro empacota e o segundo cria imagens docker para os serviços das APIs.
 
 Para testarmos use o script de execução da seguinte forma, no terminal:
 
-    >./step_6_execute
+    >./step_5_dockerize_apis
+    >./step_6_run_nodejs_server
     
-(to be continue...)
-
 José Carlos M. Oliveira Jr.
 jose.oliveira@gft.com
 

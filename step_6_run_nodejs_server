@@ -1,0 +1,1 @@
+docker run -d --name nodejs-server -p 8243:8243 nodejs-server
