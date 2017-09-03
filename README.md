@@ -25,7 +25,6 @@ Esse script é responável por:
 * baixar o arquivo de definição da API na pasta docs
 * baixar e instalar as ferramentas
   * swagger
-  * loopback
 * baixar as imagens e criar os containers:
   * swagger-generator (porta 9000)
   * swagger-editor (porta 8000)
@@ -54,14 +53,14 @@ Com as implementações geradas demonstraremos a interoperabilidade entre as ver
 
 O código gerado pelo swagger-generator é baseado na especificação da API, mas não tem um controle de persistência ou funcionalidades de negócio. Podemos alterar seus templates ou após o código ser gerado aplicar templates prontos que complementem esse código. Como exemplo execute o o próximo passo:
 
-    >./step_4_apply_templates
+    >./step_3_apply_templates
 
 ### Build e Docker
 
 No próximo passo faremos o build das APIs e seus clients, para que possam ser utilizados em outras aplicações permitindo acesso as APIs quando em execução. Para isso execute os dois scripts como descrito abaixo:
 
-    >./step_3_build
-    >./step_4_dockerize_apis
+    >./step_4_build
+    >./step_5_dockerize_apis
 
 O primeiro empacota e o segundo cria imagens docker para os serviços das APIs.
 
@@ -69,11 +68,14 @@ O primeiro empacota e o segundo cria imagens docker para os serviços das APIs.
 
 Para testarmos use o script de execução da seguinte forma, no terminal:
 
-    >./step_5_dockerize_apis
     >./step_6_run_nodejs_server
     
 José Carlos M. Oliveira Jr.
 jose.oliveira@gft.com
 
+Rafael Manzoni
+rafael.manzoni@gft.com
+
 Team API & Integration Practice Brazil
+
 GFT Brazil
