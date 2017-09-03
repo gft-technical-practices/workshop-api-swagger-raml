@@ -6,13 +6,14 @@ rm -rf generated
 # Node.JS Dependencies
 rm -rf node_modules
 
-# Remove Docker Swagger Tools
+# Stop Docker containers
 docker stop swagger-editor
 docker stop swagger-ui
 docker stop swagger-generator
 docker stop nodejs-server
 docker stop spring-server
 
+# Remove Docker containers
 docker rm swagger-editor
 docker rm swagger-ui
 docker rm swagger-generator
