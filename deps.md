@@ -37,7 +37,7 @@ Para instalar as aplicações necessárias, com excessão do NodeJS, podem ser i
 
 Para instalar o NodeJS pode utilizar o script que esta na pasta scripts/fedora:
 
-    >cd scripts/ubuntu
+    >cd scripts/fedora
     >./install_nodejs
 
 durante a execução será pedido a senha de usuário, que deve estar configurado como administrador.
@@ -57,5 +57,9 @@ Reinicie novamente e tudo funcionará como o esperado.
 José Carlos M. Oliveira Jr.
 jose.oliveira@gft.com
 
+Rafael Manzoni
+rafael.manzoni@gft.com
+
 Team API & Integration Practice Brazil
+
 GFT Brazil
