@@ -21,6 +21,11 @@ echo -e "==>> EXTRACTING $FILE_OUTPUT\n"
 sudo mkdir -p $INSTALL_DIR
 sudo tar xvf $FILE_OUTPUT -C $INSTALL_DIR --strip-components=1
 
+## Configuring user permissions
+sudo groupadd node
+sudo chown -R root:node /opt/nodejs
+sudo usermod -a -G node $USERNAME
+
 ## Adding path to profile
 sudo rm /etc/profile.d/nodeconfig.sh
 sudo cp nodeconfig.sh /etc/profile.d/nodeconfig.sh
