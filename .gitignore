@@ -98,3 +98,5 @@ typings/
 specs/
 specs/
 .vscode/
+target/
+.idea/

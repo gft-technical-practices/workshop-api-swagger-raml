@@ -19,7 +19,7 @@ durante a execução será pedido a senha de usuário, que deve estar configurad
 
     >sudo systemctl enable docker
 
-Neste ponto será necessário reiniciar a máquina. Depois para utilizar o docker com seu usuário é necessário dar as permissões através dos comandos abaixo:
+Neste ponto será necessário reiniciar a máquina. Para utilizar o docker com seu usuário é necessário dar as permissões através dos comandos abaixo:
 
     >sudo groupadd docker
     >sudo chown root:docker /var/run/docker.sock
