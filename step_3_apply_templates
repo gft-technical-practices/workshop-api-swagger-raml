@@ -3,6 +3,7 @@
 const path = require('path');
 const tools = require('./lib/common.js').tools;
 const config = require('./config.json');
+const asciify = require('asciify');
 
 // copy spring Dockerfile to spring-server
 let source = path.resolve(__dirname, './templates/docker/spring/Dockerfile');
@@ -23,3 +24,6 @@ tools.shell.cp(source, target);
 source = path.resolve(__dirname, './templates/spring-server/src/main/java/api/UsersApi.java');
 target = path.resolve(`${config.generator.generated}/spring-server/src/main/java/api/UsersApi.java`);
 tools.shell.cp(source, target);
+
+asciify('Step 3', {font:'small'}, (err, res) => {tools.shell.echo(res)});
+asciify('Apply templates', {font:'standard', color: 'blue'}, (err, res) => {tools.shell.echo(res)});

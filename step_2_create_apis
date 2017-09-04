@@ -5,6 +5,7 @@ const tools = require('./lib/common.js').tools;
 const swg = require('./lib/swgrequest.js');
 const fs = require('fs-extra');
 const path = require('path');
+const asciify = require('asciify');
 
 const spec = fs.readJsonSync(path.resolve('./specs/users_api.json'));
 
@@ -21,5 +22,5 @@ tools.shell.echo(swg.createClient(spec, 'jmeter'));
 tools.shell.echo(swg.createClient(spec, 'go'));
 tools.shell.echo(swg.createClient(spec, 'bash'));
 
-
-
+asciify('Step 2', {font:'small'}, (err, res) => {tools.shell.echo(res)});
+asciify('Create APIs', {font:'standard', color: 'blue'}, (err, res) => {tools.shell.echo(res)});

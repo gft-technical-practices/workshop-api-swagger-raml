@@ -3,8 +3,13 @@
 mkdir specs
 curl https://raw.githubusercontent.com/gft-technical-practices/workshop-api-development/master/users_api.yaml --output ./specs/users_api.yaml
 
+# Another comand line tool
+npm install -g swagger yamljs mustache asciify
+
+asciify "API & Integration Pratice" -f small
+
 # Installing npm modules
-npm install shelljs commander yamljs request request-promise fs-extra lodash handlebars unzipper
+npm install shelljs commander yamljs request request-promise fs-extra lodash handlebars unzipper asciify
 
 # The easiest way to run Swagger tools is to use docker containers
 docker pull swaggerapi/swagger-generator
@@ -14,9 +19,6 @@ docker pull swaggerapi/swagger-ui
 # APIs base docker images
 docker pull node:alpine
 docker pull openjdk:8-jdk-alpine
-
-# Another comand line tool
-sudo -i npm install -g swagger yamljs mustache
 
 # Run containers
 docker run -d -e GENERATOR_HOST=http://localhost:9000 -p 9000:8080 --name swagger-generator swaggerapi/swagger-generator
@@ -28,3 +30,7 @@ docker ps
 
 # Convert YAML Swagger to JSON Swagger
 yaml2json ./specs/users_api.yaml --pretty  > ./specs/users_api.json
+
+asciify "Step 1" -f small
+asciify "Setup tools" -f standard
+

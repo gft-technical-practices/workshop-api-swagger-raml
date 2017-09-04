@@ -4,14 +4,27 @@ const tools = require('./lib/common.js').tools;
 const build = require('./lib/builders.js');
 const path = require('path');
 const config = require('./config.json');
+const asciify = require('asciify');
 
+// Cria os pacotes de clients
 const backdir = path.resolve(__dirname);
 build.clients(backdir)
   .then((result) => {
     console.log(result);
+    // Cria os pacotes de apps
+    build.apps(backdir)
+      .then((result) => {
+        console.log(result);
+      });
   });
 
+// Cria os pacotes de servidores
 build.servers(backdir)
   .then((result) => {
     console.log(result);
   });
+
+asciify('Step 4', {font:'small'}, (err, res) => {tools.shell.echo(res)});
+asciify('Build', {font:'standard', color: 'blue'}, (err, res) => {tools.shell.echo(res)});
+  
+  

@@ -1,1 +1,5 @@
+
 docker run -d --name nodejs-server -p 8243:8243 nodejs-server
+
+asciify "Step 6" -f small
+asciify "Run Nodejs Server" -f standard
